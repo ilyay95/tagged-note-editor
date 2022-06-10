@@ -1,0 +1,7 @@
+<ul>
+    <li *ngFor="let text of texts">
+        <a (click)="selectElement(text.id)">
+            <app-text-item [text]="text.name"></app-text-item>
+        </a>
+    </li>
+</ul>
