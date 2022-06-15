@@ -1,7 +1,25 @@
-<ul>
-    <li *ngFor="let text of texts">
-        <a (click)="selectElement(text.id)">
-            <app-text-item [text]="text.name"></app-text-item>
-        </a>
-    </li>
-</ul>
+<div *ngIf="boolean" class="fff">
+    <p>text list</p>
+    <ul>
+        <li *ngFor="let text of texts" class="ddd">
+            <div class="fdf">
+                <app-text-item class="input" (click)="selectElement(text)" [text]="text.name"></app-text-item><button
+                    (click)="deleteElement(text.id)">x</button>
+            </div>
+
+        </li>
+    </ul>
+</div>
+
+
+<div *ngIf="!boolean" class="fff">
+    <p>text list</p>
+    <ul>
+        <li *ngFor="let text of texts" class="ddd">
+            <div class="fdf">
+                <textarea class="fff" name="title" rows="1" cols="15" [(ngModel)]="text.name"></textarea><button
+                    class="f1ff" (click)="add(text.id)">add</button>
+            </div>
+        </li>
+    </ul>
+</div>

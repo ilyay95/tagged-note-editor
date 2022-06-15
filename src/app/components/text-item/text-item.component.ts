@@ -6,6 +6,7 @@ import { Component, Input } from '@angular/core';
     styleUrls: ['./text-item.component.scss']
 })
 export class TextItemComponent {
+
     @Input()
     text: string = ' ';
 }

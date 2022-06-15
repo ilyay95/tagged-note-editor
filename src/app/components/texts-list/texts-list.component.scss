@@ -1,3 +1,49 @@
 li {
     list-style: none;
+    min-height: 30px;
+}
+
+app-text-item {
+    white-space: nowrap;
+    overflow: hidden;
+    width: 15px;
+    text-overflow: ellipsis;
+}
+
+app-text-item:hover {
+    background-color: red
+}
+
+ul {
+    max-width: 100%;
+    width: auto;
+    text-align: center;
+    border: solid green 2.5px;
+}
+
+.fff,
+.f1ff {
+    width: auto;
+    text-align: center;
+    margin-top: 10px;
+    margin-top: 10px;
+}
+
+.input {
+    display: inline-flex;
+    width: 100px;
+    text-align: center;
+    vertical-align: bottom;
+}
+
+.ddd {
+    text-align: center;
+}
+
+.fdf {
+    margin-bottom: 5px;
+}
+
+button {
+    margin-left: 30px;
 }
