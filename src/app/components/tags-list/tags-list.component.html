@@ -1,7 +1,7 @@
-<div class="fff">
+<div class="div">
     <p>tags list</p>
-    <ul class="hr" class="nav navbar-nav list-inline">
-        <li *ngFor="let text of texts" class="list-inline-item">
+    <ul class="hr">
+        <li *ngFor="let text of texts">
             <app-text-item (click)="selectElement(text.id)" [text]="text.tag"></app-text-item>
         </li>
     </ul>

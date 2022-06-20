@@ -1,10 +1,10 @@
-<div *ngIf="boolean" class="fff">
+<div *ngIf="boolean" class="div">
     <p>text list</p>
     <ul>
         <li *ngFor="let text of texts" class="ddd">
-            <div class="fdf">
+            <div class="textArea">
                 <app-text-item class="input" (click)="selectElement(text)" [text]="text.name"></app-text-item><button
-                    (click)="deleteElement(text.id)">x</button>
+                    class="button1" (click)="deleteElement(text.id)">x</button>
             </div>
 
         </li>
@@ -12,14 +12,22 @@
 </div>
 
 
-<div *ngIf="!boolean" class="fff">
-    <p>text list</p>
+<div *ngIf="!boolean" class="div">
+    <p>text list </p>
     <ul>
         <li *ngFor="let text of texts" class="ddd">
-            <div class="fdf">
+            <div class="textArea">
                 <textarea class="fff" name="title" rows="1" cols="15" [(ngModel)]="text.name"></textarea><button
-                    class="f1ff" (click)="add(text.id)">add</button>
+                    class="button2" (click)="add(text.id)">add</button>
             </div>
         </li>
     </ul>
+
+
+</div>
+<div *ngIf="!boolean1" class="div">
+    <p class="aaa">Применена фильтрация по тегу. для отмены фильтрации нажмите на кнопку
+        <button (click)="aaa()"> 🔍
+        </button>
+    </p>
 </div>

@@ -17,6 +17,7 @@ export class TextsListComponent extends TextItemComponent implements OnInit {
     tags: any = [];
     globalId: any;
     addTExtId: any;
+    boolean1: boolean = true;
 
     constructor(
         public dataService: DataService
@@ -38,7 +39,7 @@ export class TextsListComponent extends TextItemComponent implements OnInit {
 
     start2(): void {
         let filterTextsByTag = [];
-
+        this.boolean1 = false;
         this.texts = this.dataService.readFromStorage('texts');
 
         for (let key of this.dataService.trueTexts) {
@@ -146,8 +147,8 @@ export class TextsListComponent extends TextItemComponent implements OnInit {
 
         sessionStorage.setItem('1', str)
         this.texts.length = 0;
-        this.texts.push(id)
-        this.boolean = false
+        this.texts.push(id);
+        this.boolean = false;
     }
 
     add(id: any): void {
@@ -293,6 +294,11 @@ export class TextsListComponent extends TextItemComponent implements OnInit {
         this.dataService.writeToStorage('connections', connectionsArray);
         this.globalId.length = 0;
         this.tags.length = 0;
+    }
+
+    aaa(): void {
+        this.boolean = true;
+        this.boolean1 = true;
     }
 
 }

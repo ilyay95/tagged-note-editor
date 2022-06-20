@@ -1,49 +1,72 @@
-li {
-    list-style: none;
-    min-height: 30px;
-}
-
-app-text-item {
-    white-space: nowrap;
-    overflow: hidden;
-    width: 15px;
-    text-overflow: ellipsis;
-}
-
-app-text-item:hover {
-    background-color: red
-}
-
-ul {
-    max-width: 100%;
-    width: auto;
+.div {
     text-align: center;
-    border: solid green 2.5px;
-}
-
-.fff,
-.f1ff {
     width: auto;
     text-align: center;
     margin-top: 10px;
     margin-top: 10px;
+
+    ul {
+        max-width: 100%;
+        width: auto;
+        text-align: center;
+        border: solid green 2.5px;
+
+        li {
+            list-style: none;
+            min-height: 30px;
+
+            .textArea {
+                width: auto;
+                text-align: center;
+                margin-top: 10px;
+                margin-top: 10px;
+
+                app-text-item {
+                    white-space: nowrap;
+                    overflow: hidden;
+                    width: 15px;
+                    text-overflow: ellipsis;
+                    margin-bottom: 15px;
+                }
+
+                .input {
+                    display: inline-flex;
+                    width: 100px;
+                    text-align: center;
+                    vertical-align: bottom;
+                    margin-bottom: 15px;
+                }
+
+                .button1 {
+                    margin-left: 30px;
+                    margin-bottom: 14px;
+                    -webkit-transition-duration: 0.4s;
+
+                    transition-duration: 0.4s;
+
+                    &:hover {
+                        background-color: #cf706a;
+                        color: white;
+                    }
+                }
+
+                .button2 {
+                    margin-left: 30px;
+                    margin-bottom: 14px;
+                    -webkit-transition-duration: 0.4s;
+
+                    transition-duration: 0.4s;
+
+                    &:hover {
+                        background-color: #31d156;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
 }
 
-.input {
-    display: inline-flex;
-    width: 100px;
-    text-align: center;
-    vertical-align: bottom;
-}
-
-.ddd {
-    text-align: center;
-}
-
-.fdf {
-    margin-bottom: 5px;
-}
-
-button {
-    margin-left: 30px;
+.aaa {
+    display: inline-block
 }

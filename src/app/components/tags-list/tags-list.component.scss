@@ -1,15 +1,28 @@
-li {
-    color: red;
-    list-style-type: none
-}
-
-.fff {
+.div {
     width: auto;
     text-align: center;
     margin-top: 50px;
-}
 
-li {
-    display: inline-flex;
-    margin-left: 15px;
+    ul {
+        margin-right: 30px;
+
+        li {
+            display: inline-flex;
+            margin-left: 15px;
+            margin-bottom: 15px;
+            list-style-type: none;
+
+            app-text-item {
+                background-color: antiquewhite;
+                border: 0.5px ridge rgba(211, 220, 50, .6);
+                width: 30px;
+                padding-bottom: 7px;
+
+                &:hover {
+                    background-color: hsl(33, 32%, 72%);
+                    border: 0.5px ridge rgba(211, 220, 50, .6);
+                }
+            }
+        }
+    }
 }
