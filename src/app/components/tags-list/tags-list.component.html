@@ -1,0 +1,8 @@
+<div class="div">
+    <p>tags list</p>
+    <ul class="hr">
+        <li *ngFor="let text of texts">
+            <app-text-item (click)="selectElement(text.id)" [text]="text.tag"></app-text-item>
+        </li>
+    </ul>
+</div>

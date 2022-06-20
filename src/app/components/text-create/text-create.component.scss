@@ -1,0 +1,37 @@
+$background_col: #28a75d;
+$col: #fff;
+$hover_background: #31d156;
+
+.input {
+    display: inline-flex;
+    margin-bottom: 10px;
+    margin-top: 50px;
+    width: auto;
+    text-align: center;
+
+    & .addtag {
+        padding: 8px 10px;
+        border: 0;
+        background: transparent;
+        font: inherit;
+        box-sizing: border-box;
+    }
+
+    .addtag {
+        border: 1px solid #ccc;
+        border-radius: 0 6px 6px 0;
+        background: $background_col;
+        color: $col;
+        text-transform: uppercase;
+
+        &:not([disabled]):hover {
+            background: $hover_background;
+        }
+    }
+
+    textarea {
+        text-align: center;
+        line-height: 30px;
+        margin-left: 35px;
+    }
+}
