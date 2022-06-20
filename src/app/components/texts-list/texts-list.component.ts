@@ -296,6 +296,7 @@ export class TextsListComponent extends TextItemComponent implements OnInit {
         this.tags.length = 0;
     }
 
+
     aaa(): void {
         this.boolean = true;
         this.boolean1 = true;
