@@ -5,11 +5,15 @@
     margin-top: 10px;
     margin-top: 10px;
 
+    h3 {
+        color: white
+    }
+
     ul {
         max-width: 100%;
         width: auto;
         text-align: center;
-        border: solid green 2.5px;
+        border: solid rgb(11, 44, 87) 2.5px;
 
         li {
             list-style: none;
@@ -27,6 +31,7 @@
                     width: 15px;
                     text-overflow: ellipsis;
                     margin-bottom: 15px;
+                    color: white
                 }
 
                 .input {
@@ -68,5 +73,6 @@
 }
 
 .aaa {
-    display: inline-block
+    display: inline-block;
+    color: white
 }

@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { TextItemComponent } from '../text-item/text-item.component';
 import { DataService } from 'src/app/services/data.service';
 
-
 @Component({
     selector: 'app-texts-list',
     templateUrl: './texts-list.component.html',
@@ -149,6 +148,9 @@ export class TextsListComponent extends TextItemComponent implements OnInit {
         this.texts.length = 0;
         this.texts.push(id);
         this.boolean = false;
+
+
+        this.dataService.selectText(id);
     }
 
     add(id: any): void {
@@ -173,6 +175,9 @@ export class TextsListComponent extends TextItemComponent implements OnInit {
         }
 
         this.boolean = true;
+
+
+        this.dataService.thisText = null;
     }
 
     addText(): void {

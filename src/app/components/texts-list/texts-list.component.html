@@ -1,5 +1,5 @@
 <div *ngIf="boolean" class="div">
-    <p>text list</p>
+    <h3>Text list</h3>
     <ul>
         <li *ngFor="let text of texts" class="ddd">
             <div class="textArea">
@@ -11,9 +11,8 @@
     </ul>
 </div>
 
-
 <div *ngIf="!boolean" class="div">
-    <p>text list </p>
+    <h3>Text list </h3>
     <ul>
         <li *ngFor="let text of texts" class="ddd">
             <div class="textArea">
@@ -22,7 +21,6 @@
             </div>
         </li>
     </ul>
-
 
 </div>
 <div *ngIf="!boolean1" class="div">

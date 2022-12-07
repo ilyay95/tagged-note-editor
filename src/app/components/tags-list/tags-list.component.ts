@@ -11,6 +11,7 @@ export interface TagsListComponent {
     templateUrl: './tags-list.component.html',
     styleUrls: ['./tags-list.component.scss']
 })
+
 export class TagsListComponent implements OnInit {
 
     texts: any;
@@ -25,6 +26,32 @@ export class TagsListComponent implements OnInit {
 
     ngDoCheck(): void {
         this.start();
+    }
+
+    ngAfterViewChecked(): void {
+        this.sss()
+    }
+
+    sss(): void {
+        let dd: any = [];
+        if (this.dataService.thisText !== 0) {
+            let s = this.dataService.thisText;
+            const connectionsArray: any = this.dataService.readFromStorage('connections');
+            for (let a = 0; a < connectionsArray.length; a++) {
+                if (connectionsArray[a].textId == s.id) {
+                    dd.push(connectionsArray[a].tagId);
+                }
+            }
+            let uniqueChars = [...new Set(dd)];
+
+            for (let a = 0; a < uniqueChars.length; a++) {
+
+                let ss = uniqueChars[a] + '-element-container';
+                let d = document.getElementById(ss);
+                if (d != null) { d.classList.add("mystyle"); }///TODO
+            }
+        }
+
     }
 
     start(): void {
@@ -44,5 +71,6 @@ export class TagsListComponent implements OnInit {
         }
 
         this.dataService.select(a);
+
     }
 }

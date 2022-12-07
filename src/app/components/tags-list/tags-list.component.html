@@ -1,8 +1,11 @@
 <div class="div">
-    <p>tags list</p>
+    <h3>Tags list</h3>
+
     <ul class="hr">
-        <li *ngFor="let text of texts">
-            <app-text-item (click)="selectElement(text.id)" [text]="text.tag"></app-text-item>
+        <li *ngFor="let text of texts let i=index">
+            <app-text-item (click)="selectElement(text.id)" [id]="text.id + '-element-container'" [text]="text.tag">
+            </app-text-item>
+
         </li>
     </ul>
 </div>

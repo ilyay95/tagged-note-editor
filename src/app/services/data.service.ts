@@ -8,6 +8,8 @@ export class DataService {
     trueTexts: any;
     constructor() { }
 
+    thisText: any = 0;
+
 
     readFromStorage(key: string): void {
 
@@ -23,6 +25,12 @@ export class DataService {
 
     select(a: any): void {
         this.trueTexts = a;
+    }
+
+    selectText(a: any): void {
+
+        this.thisText = a;
+        console.log(this.thisText)
     }
 
 }

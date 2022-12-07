@@ -35,6 +35,7 @@ export class TextCreateComponent {
                 this.addConnections();
             }
         }
+        this.text = '';
     }
 
     addText(): void {
